@@ -1,10 +1,10 @@
-#Major Project - Bug hunting on any target of openbugbounty
+# Major Project - Bug hunting on any target of openbugbounty
 ## Name - Varchasva Khare
 ## Team Members - [](), []()
 
 ## Issue Description
-Target website we got on [openbugbounty](openbugbounty.org) - [beachhouse.com](beachhouse.com)
-Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted web sites. XSS attacks occur when an attacker uses a web application to send malicious code, generally in the form of a browser side script, to a different end user. 
+- Target website we got on [openbugbounty](openbugbounty.org) - [beachhouse.com](beachhouse.com)
+- Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted web sites. XSS attacks occur when an attacker uses a web application to send malicious code, generally in the form of a browser side script, to a different end user. 
 
 ## Issue Identified
 The consultant identified that the update profile picture is vulnerable to cross site scripting, it is possible to upload an image with a MIME type of `text/html` this is then stored on the user's profile as an XSS payload, the outline below demonstrates the steps taken to exploit and reproduce.
