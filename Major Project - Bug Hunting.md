@@ -28,7 +28,7 @@ Navigate to [https://www.beachhouse.com/portal/reg.php](https://www.beachhouse.c
 Modify the profile image request with a local proxy, in this case the consultant is using Burp Suite. Change the Content type from image to text/html as shown in the post request:
 
     POST /file/upload/ HTTP/1.1
-    Host: example.com
+    Host: beachhouse.com
     ---snip----
     
     -----------------------------900627130554
@@ -41,13 +41,13 @@ Modify the profile image request with a local proxy, in this case the consultant
 When this is sent, the following response is shown:
 
     HTTP/1.1 200 OK
-    Date: Sat, 13 Aug 2016 14:31:44 GMT
+    Date: Tue, 02 May 2023 14:31:44 GMT
     ---snip---
     
     {"url": "https://example.com/56fc3b92159006271305543ef45a04452e8e45ce4/stored_XSS.jpg?Expires=1465669904&Signature=dNtl1PzWV&Key-Pair-Id=APKAJQWLJPIV25LBZGAQ", "pk": "56fc3b92159006271305543ef45a04452e8e45ce4/stored_XSS.jpg", "success": true}
 
 **Step 3:**
-The file has been uploaded to Application X and is hyperlinked to from the profile page as shown in step 3.jpg. By simply following the link to the image which in this case is:
+The file has been uploaded to a Application and is hyperlinked to from the profile page. By simply following the link to the image which in this case is:
 
 The payload is executed, thus this demonstrates the issue is stored cross site scripting.
 
@@ -55,7 +55,7 @@ The payload is executed, thus this demonstrates the issue is stored cross site s
 This issue will affect all users on the site who view the profile of the attacker, when the image is rendered the payload is executed instead of a profile image. Additionally when the malicious user posts anything on the forums the payload will execute.
 
 ## References
-For more information on remediation steps check out reference [[2]](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)).
+For more information check out reference [https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)).
 
  - [1] [OWASP XSS Explained](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS))
  - [2] [OWASP XSS Prevention Cheat Sheet](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
