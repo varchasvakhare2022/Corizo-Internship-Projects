@@ -22,7 +22,7 @@ The following steps indicate a proof of concept outlined in three(3) steps to re
 **Step 1:**
 Navigate to [https://www.beachhouse.com/portal/reg.php](https://www.beachhouse.com/portal/reg.php) and select edit as shown in screenshot attached below.
 
-<img src="https://github.com/varchasvakhare2022/Corizo-Internship-Projects/blob/master/images/s1.png">
+<img src="https://github.com/varchasvakhare2022/Corizo-Internship-Projects/blob/master/images/step1.png">
 
 **Step 2:**
 Modify the profile image request with a local proxy, in this case the consultant is using Burp Suite. Change the Content type from image to text/html as shown in the post request:
