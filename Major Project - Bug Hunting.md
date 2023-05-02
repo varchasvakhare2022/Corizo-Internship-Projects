@@ -1,6 +1,6 @@
 # Major Project - Bug hunting on any target of openbugbounty
 ## Name - Varchasva Khare
-## Team Members - [](), []()
+## Team Members - [Ishan Amrit](https://github.com/IshanAmrit28), [Navya Pillai]()
 
 ## Issue Description
 - Target website we got on [openbugbounty](openbugbounty.org) - [beachhouse.com](beachhouse.com)
